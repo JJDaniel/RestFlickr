@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+		xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Images</title>
+</head>
+<body>
+
+	<table>
+		<tr><th>Id</th><th>Title</th><th>URL</th></tr>
+		
+		<th:block th:each="photo : ${root.photos.photo}">
+	    <tr>
+	        <td th:text="${photo.id}"> id</td> 
+	        <td th:text="${photo.title}">title</td>
+	        <td> <a th:href="${photo.url}"> Image </a></td>
+	        
+	    </tr>
+		</th:block>
+	</table>
+</body>
+</html>
